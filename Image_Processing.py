@@ -9,7 +9,8 @@ import re
 from PIL.ImageEnhance import Color
 
 
-def convert_format(img_a):
+def convert_format(format):
+    img_a = Image.open(format)
     print('Please specify the filter mode for conversion :')
     print(f'1:Blur \t 2:Detail \t 3:Emboss \t 4:Sharpen ')
     input_data = input(f'Please enter the number:\t')
@@ -56,7 +57,8 @@ def create_thumbnail(thumbnail):
     return img1
 
 
-def convert_mode(img_a):
+def convert_mode(mode):
+    img_a = Image.open(mode)
     print('Please specify the color mode for conversion :')
     print(f'1:Black and white \t 2:RGBA \t 3:1-bit pixels, black and white ')
     input_data = input(f'Please enter the number:\t')
@@ -82,7 +84,8 @@ def convert_mode(img_a):
     return image_convert
 
 
-def image_enhance(img_a):
+def image_enhance(enhance):
+    img_a = Image.open(enhance)
     print('Please specify the Enhance Mode for conversion :')
     print(f'1:Color \t 2:Contrast  \t 3:Brightness \t 4:Sharpeness ')
     input_data = input(f'Please enter the number:\t')
